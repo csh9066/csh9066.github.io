@@ -442,41 +442,41 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 <div id="toc" class="toc2">
 <div id="toctitle">Table of Contents</div>
 <ul class="sectlevel1">
-<li><a href="#resources-create-evenets">단일 조회</a>
+<li><a href="#get-task">단일 조회</a>
 <ul class="sectlevel2">
-<li><a href="#resources-create-evenets_http_request">HTTP request</a></li>
-<li><a href="#resources-create-evenets_http_response">HTTP response</a></li>
-<li><a href="#resources-create-evenets_response_fields">Response fields</a></li>
+<li><a href="#get-task_http_request">HTTP request</a></li>
+<li><a href="#get-task_http_response">HTTP response</a></li>
+<li><a href="#get-task_response_fields">Response fields</a></li>
 <li><a href="#_error_response">Error response</a></li>
 </ul>
 </li>
-<li><a href="#resources-create-evenets">페이징 조회</a>
+<li><a href="#page-task">페이징 조회</a>
 <ul class="sectlevel2">
-<li><a href="#resources-create-evenets_http_request">HTTP request</a></li>
-<li><a href="#resources-create-evenets_request_parameters">Request parameters</a></li>
-<li><a href="#resources-create-evenets_http_response">HTTP response</a></li>
+<li><a href="#page-task_http_request">HTTP request</a></li>
+<li><a href="#page-task_request_parameters">Request parameters</a></li>
+<li><a href="#page-task_http_response">HTTP response</a></li>
 </ul>
 </li>
-<li><a href="#resources-create-evenets">생성</a>
+<li><a href="#create-task">생성</a>
 <ul class="sectlevel2">
-<li><a href="#resources-create-evenets_http_request">HTTP request</a></li>
-<li><a href="#resources-create-evenets_request_fields">Request fields</a></li>
-<li><a href="#resources-create-evenets_http_response">HTTP response</a></li>
+<li><a href="#create-task_http_request">HTTP request</a></li>
+<li><a href="#create-task_request_fields">Request fields</a></li>
+<li><a href="#create-task_http_response">HTTP response</a></li>
 <li><a href="#_error_response_2">Error response</a></li>
 </ul>
 </li>
-<li><a href="#resources-create-evenets">업데이트</a>
+<li><a href="#update-task">업데이트</a>
 <ul class="sectlevel2">
-<li><a href="#resources-create-evenets_http_request">HTTP request</a></li>
-<li><a href="#resources-create-evenets_request_fields">Request fields</a></li>
-<li><a href="#resources-create-evenets_http_response">HTTP response</a></li>
+<li><a href="#update-task_http_request">HTTP request</a></li>
+<li><a href="#update-task_request_fields">Request fields</a></li>
+<li><a href="#update-task_http_response">HTTP response</a></li>
 <li><a href="#_error_response_3">Error response</a></li>
 </ul>
 </li>
-<li><a href="#resources-create-evenets">삭제</a>
+<li><a href="#delete-task">삭제</a>
 <ul class="sectlevel2">
-<li><a href="#resources-create-evenets_http_request">HTTP request</a></li>
-<li><a href="#resources-create-evenets_http_response">HTTP response</a></li>
+<li><a href="#delete-task_http_request">HTTP request</a></li>
+<li><a href="#delete-task_http_response">HTTP response</a></li>
 <li><a href="#_error_response_4">Error response</a></li>
 </ul>
 </li>
@@ -485,13 +485,13 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 </div>
 <div id="content">
 <div class="sect1">
-<h2 id="resources-create-evenets"><a class="link" href="#resources-create-evenets">단일 조회</a></h2>
+<h2 id="get-task"><a class="link" href="#get-task">단일 조회</a></h2>
 <div class="sectionbody">
 <div class="paragraph">
 <p><code>GET</code> 요청을 사용해서 특정 ID의 Task 한개를 조회 합니다.</p>
 </div>
 <div class="sect2">
-<h3 id="resources-create-evenets_http_request"><a class="link" href="#resources-create-evenets_http_request">HTTP request</a></h3>
+<h3 id="get-task_http_request"><a class="link" href="#get-task_http_request">HTTP request</a></h3>
 <div class="listingblock">
 <div class="content">
 <pre class="highlightjs highlight nowrap"><code data-lang="http" class="language-http hljs">GET /tasks/4 HTTP/1.1
@@ -500,27 +500,27 @@ Host: localhost:8080</code></pre>
 </div>
 </div>
 <div class="sect2">
-<h3 id="resources-create-evenets_http_response"><a class="link" href="#resources-create-evenets_http_response">HTTP response</a></h3>
+<h3 id="get-task_http_response"><a class="link" href="#get-task_http_response">HTTP response</a></h3>
 <div class="listingblock">
 <div class="content">
 <pre class="highlightjs highlight nowrap"><code data-lang="http" class="language-http hljs">HTTP/1.1 200 OK
 Content-Type: application/json;charset=UTF-8
-Content-Length: 219
+Content-Length: 221
 
 {
   "id" : 4,
   "title" : "타이틀",
   "author" : "author",
   "finished" : false,
-  "dueDateTime" : "2022-10-13T10:57:04.79286",
+  "dueDateTime" : "2022-10-13T15:00:20.849078",
   "finishedDateTime" : null,
-  "startedDateTime" : "2022-10-06T10:57:04.79386"
+  "startedDateTime" : "2022-10-06T15:00:20.850073"
 }</code></pre>
 </div>
 </div>
 </div>
 <div class="sect2">
-<h3 id="resources-create-evenets_response_fields"><a class="link" href="#resources-create-evenets_response_fields">Response fields</a></h3>
+<h3 id="get-task_response_fields"><a class="link" href="#get-task_response_fields">Response fields</a></h3>
 <table class="tableblock frame-all grid-all stretch">
 <colgroup>
 <col style="width: 25%;">
@@ -604,22 +604,22 @@ Content-Length: 219
 </div>
 </div>
 <div class="sect1">
-<h2 id="resources-create-evenets"><a class="link" href="#resources-create-evenets">페이징 조회</a></h2>
+<h2 id="page-task"><a class="link" href="#page-task">페이징 조회</a></h2>
 <div class="sectionbody">
 <div class="paragraph">
 <p><code>GET</code> 요청을 사용해서 페이징 조회를 합니다.</p>
 </div>
 <div class="sect2">
-<h3 id="resources-create-evenets_http_request"><a class="link" href="#resources-create-evenets_http_request">HTTP request</a></h3>
+<h3 id="page-task_http_request"><a class="link" href="#page-task_http_request">HTTP request</a></h3>
 <div class="listingblock">
 <div class="content">
-<pre class="highlightjs highlight nowrap"><code data-lang="http" class="language-http hljs">GET /tasks?size=10&amp;page=0 HTTP/1.1
+<pre class="highlightjs highlight nowrap"><code data-lang="http" class="language-http hljs">GET /tasks?size=10&amp;page=1 HTTP/1.1
 Host: localhost:8080</code></pre>
 </div>
 </div>
 </div>
 <div class="sect2">
-<h3 id="resources-create-evenets_request_parameters"><a class="link" href="#resources-create-evenets_request_parameters">Request parameters</a></h3>
+<h3 id="page-task_request_parameters"><a class="link" href="#page-task_request_parameters">Request parameters</a></h3>
 <table class="tableblock frame-all grid-all stretch">
 <colgroup>
 <col style="width: 33.3333%;">
@@ -648,94 +648,94 @@ Host: localhost:8080</code></pre>
 </table>
 </div>
 <div class="sect2">
-<h3 id="resources-create-evenets_http_response"><a class="link" href="#resources-create-evenets_http_response">HTTP response</a></h3>
+<h3 id="page-task_http_response"><a class="link" href="#page-task_http_response">HTTP response</a></h3>
 <div class="listingblock">
 <div class="content">
 <pre class="highlightjs highlight nowrap"><code data-lang="http" class="language-http hljs">HTTP/1.1 200 OK
 Content-Type: application/json;charset=UTF-8
-Content-Length: 2897
+Content-Length: 2905
 
 {
   "content" : [ {
-    "id" : 5,
+    "id" : 45,
     "title" : "타이틀",
     "author" : "author",
     "finished" : false,
-    "dueDateTime" : "2022-10-13T10:57:04.899522",
+    "dueDateTime" : "2022-10-13T15:00:20.990072",
     "finishedDateTime" : null,
-    "startedDateTime" : "2022-10-06T10:57:04.900521"
+    "startedDateTime" : "2022-10-06T15:00:20.986082"
   }, {
-    "id" : 6,
+    "id" : 46,
     "title" : "타이틀",
     "author" : "author",
     "finished" : false,
-    "dueDateTime" : "2022-10-13T10:57:04.900521",
+    "dueDateTime" : "2022-10-13T15:00:20.990072",
     "finishedDateTime" : null,
-    "startedDateTime" : "2022-10-06T10:57:04.900521"
+    "startedDateTime" : "2022-10-06T15:00:20.986082"
   }, {
-    "id" : 7,
+    "id" : 47,
     "title" : "타이틀",
     "author" : "author",
     "finished" : false,
-    "dueDateTime" : "2022-10-13T10:57:04.901527",
+    "dueDateTime" : "2022-10-13T15:00:20.990072",
     "finishedDateTime" : null,
-    "startedDateTime" : "2022-10-06T10:57:04.900521"
+    "startedDateTime" : "2022-10-06T15:00:20.986082"
   }, {
-    "id" : 8,
+    "id" : 48,
     "title" : "타이틀",
     "author" : "author",
     "finished" : false,
-    "dueDateTime" : "2022-10-13T10:57:04.902526",
+    "dueDateTime" : "2022-10-13T15:00:20.990072",
     "finishedDateTime" : null,
-    "startedDateTime" : "2022-10-06T10:57:04.900521"
+    "startedDateTime" : "2022-10-06T15:00:20.986082"
   }, {
-    "id" : 9,
+    "id" : 49,
     "title" : "타이틀",
     "author" : "author",
     "finished" : false,
-    "dueDateTime" : "2022-10-13T10:57:04.902526",
+    "dueDateTime" : "2022-10-13T15:00:20.991084",
     "finishedDateTime" : null,
-    "startedDateTime" : "2022-10-06T10:57:04.900521"
+    "startedDateTime" : "2022-10-06T15:00:20.986082"
   }, {
-    "id" : 10,
+    "id" : 50,
     "title" : "타이틀",
     "author" : "author",
     "finished" : false,
-    "dueDateTime" : "2022-10-13T10:57:04.903525",
+    "dueDateTime" : "2022-10-13T15:00:20.991084",
     "finishedDateTime" : null,
-    "startedDateTime" : "2022-10-06T10:57:04.900521"
+    "startedDateTime" : "2022-10-06T15:00:20.986082"
   }, {
-    "id" : 11,
+    "id" : 51,
     "title" : "타이틀",
     "author" : "author",
     "finished" : false,
-    "dueDateTime" : "2022-10-13T10:57:04.904526",
+    "dueDateTime" : "2022-10-13T15:00:20.991084",
     "finishedDateTime" : null,
-    "startedDateTime" : "2022-10-06T10:57:04.900521"
+    "startedDateTime" : "2022-10-06T15:00:20.986082"
   }, {
-    "id" : 12,
+    "id" : 52,
     "title" : "타이틀",
     "author" : "author",
     "finished" : false,
-    "dueDateTime" : "2022-10-13T10:57:04.905525",
+    "dueDateTime" : "2022-10-13T15:00:20.991084",
     "finishedDateTime" : null,
-    "startedDateTime" : "2022-10-06T10:57:04.900521"
+    "startedDateTime" : "2022-10-06T15:00:20.986082"
   }, {
-    "id" : 13,
+    "id" : 53,
     "title" : "타이틀",
     "author" : "author",
     "finished" : false,
-    "dueDateTime" : "2022-10-13T10:57:04.905525",
+    "dueDateTime" : "2022-10-13T15:00:20.992119",
     "finishedDateTime" : null,
-    "startedDateTime" : "2022-10-06T10:57:04.900521"
+    "startedDateTime" : "2022-10-06T15:00:20.986082"
   }, {
-    "id" : 14,
+    "id" : 54,
     "title" : "타이틀",
     "author" : "author",
     "finished" : false,
-    "dueDateTime" : "2022-10-13T10:57:04.90752",
+    "dueDateTime" : "2022-10-13T15:00:20.992119",
     "finishedDateTime" : null,
-    "startedDateTime" : "2022-10-06T10:57:04.900521"
+    "startedDateTime" : "2022-10-06T15:00:20.986082"
   } ],
   "pageable" : {
     "sort" : {
@@ -743,23 +743,23 @@ Content-Length: 2897
       "sorted" : false,
       "unsorted" : true
     },
-    "offset" : 0,
+    "offset" : 10,
+    "pageNumber" : 1,
     "pageSize" : 10,
-    "pageNumber" : 0,
     "paged" : true,
     "unpaged" : false
   },
   "last" : false,
-  "totalPages" : 3,
   "totalElements" : 30,
+  "totalPages" : 3,
   "size" : 10,
-  "number" : 0,
+  "number" : 1,
   "sort" : {
     "empty" : true,
     "sorted" : false,
     "unsorted" : true
   },
-  "first" : true,
+  "first" : false,
   "numberOfElements" : 10,
   "empty" : false
 }</code></pre>
@@ -769,13 +769,13 @@ Content-Length: 2897
 </div>
 </div>
 <div class="sect1">
-<h2 id="resources-create-evenets"><a class="link" href="#resources-create-evenets">생성</a></h2>
+<h2 id="create-task"><a class="link" href="#create-task">생성</a></h2>
 <div class="sectionbody">
 <div class="paragraph">
 <p><code>POST</code> 요청을 사용해서 새 Task를 만들 수 있습니다.</p>
 </div>
 <div class="sect2">
-<h3 id="resources-create-evenets_http_request"><a class="link" href="#resources-create-evenets_http_request">HTTP request</a></h3>
+<h3 id="create-task_http_request"><a class="link" href="#create-task_http_request">HTTP request</a></h3>
 <div class="listingblock">
 <div class="content">
 <pre class="highlightjs highlight nowrap"><code data-lang="http" class="language-http hljs">POST /tasks HTTP/1.1
@@ -787,13 +787,13 @@ Host: localhost:8080
   "title" : "과제 하기",
   "author" : "승노",
   "finished" : true,
-  "dueDateTime" : "2022-10-13T10:57:04.6728611"
+  "dueDateTime" : "2022-10-13T15:00:20.7630796"
 }</code></pre>
 </div>
 </div>
 </div>
 <div class="sect2">
-<h3 id="resources-create-evenets_request_fields"><a class="link" href="#resources-create-evenets_request_fields">Request fields</a></h3>
+<h3 id="create-task_request_fields"><a class="link" href="#create-task_request_fields">Request fields</a></h3>
 <table class="tableblock frame-all grid-all stretch">
 <colgroup>
 <col style="width: 25%;">
@@ -844,7 +844,7 @@ Host: localhost:8080
 </table>
 </div>
 <div class="sect2">
-<h3 id="resources-create-evenets_http_response"><a class="link" href="#resources-create-evenets_http_response">HTTP response</a></h3>
+<h3 id="create-task_http_response"><a class="link" href="#create-task_http_response">HTTP response</a></h3>
 <div class="listingblock">
 <div class="content">
 <pre class="highlightjs highlight nowrap"><code data-lang="http" class="language-http hljs">HTTP/1.1 201 Created
@@ -877,13 +877,13 @@ Content-Length: 1
 </div>
 </div>
 <div class="sect1">
-<h2 id="resources-create-evenets"><a class="link" href="#resources-create-evenets">업데이트</a></h2>
+<h2 id="update-task"><a class="link" href="#update-task">업데이트</a></h2>
 <div class="sectionbody">
 <div class="paragraph">
 <p><code>PUT</code> 요청을 사용해서 기존 Task에 대해 변경할 수 있습니다.</p>
 </div>
 <div class="sect2">
-<h3 id="resources-create-evenets_http_request"><a class="link" href="#resources-create-evenets_http_request">HTTP request</a></h3>
+<h3 id="update-task_http_request"><a class="link" href="#update-task_http_request">HTTP request</a></h3>
 <div class="listingblock">
 <div class="content">
 <pre class="highlightjs highlight nowrap"><code data-lang="http" class="language-http hljs">PUT /tasks/2 HTTP/1.1
@@ -895,13 +895,13 @@ Host: localhost:8080
   "title" : "과제 하기",
   "author" : "승노",
   "finished" : true,
-  "dueDateTime" : "2022-10-13T10:57:04.3968553"
+  "dueDateTime" : "2022-10-13T15:00:20.5700725"
 }</code></pre>
 </div>
 </div>
 </div>
 <div class="sect2">
-<h3 id="resources-create-evenets_request_fields"><a class="link" href="#resources-create-evenets_request_fields">Request fields</a></h3>
+<h3 id="update-task_request_fields"><a class="link" href="#update-task_request_fields">Request fields</a></h3>
 <table class="tableblock frame-all grid-all stretch">
 <colgroup>
 <col style="width: 25%;">
@@ -952,7 +952,7 @@ Host: localhost:8080
 </table>
 </div>
 <div class="sect2">
-<h3 id="resources-create-evenets_http_response"><a class="link" href="#resources-create-evenets_http_response">HTTP response</a></h3>
+<h3 id="update-task_http_response"><a class="link" href="#update-task_http_response">HTTP response</a></h3>
 <div class="listingblock">
 <div class="content">
 <pre class="highlightjs highlight nowrap"><code data-lang="http" class="language-http hljs">HTTP/1.1 204 No Content</code></pre>
@@ -985,13 +985,13 @@ Host: localhost:8080
 </div>
 </div>
 <div class="sect1">
-<h2 id="resources-create-evenets"><a class="link" href="#resources-create-evenets">삭제</a></h2>
+<h2 id="delete-task"><a class="link" href="#delete-task">삭제</a></h2>
 <div class="sectionbody">
 <div class="paragraph">
 <p><code>DELETE</code> 요청을 사용해서 기존 Task를 삭제 합니다.</p>
 </div>
 <div class="sect2">
-<h3 id="resources-create-evenets_http_request"><a class="link" href="#resources-create-evenets_http_request">HTTP request</a></h3>
+<h3 id="delete-task_http_request"><a class="link" href="#delete-task_http_request">HTTP request</a></h3>
 <div class="listingblock">
 <div class="content">
 <pre class="highlightjs highlight nowrap"><code data-lang="http" class="language-http hljs">DELETE /tasks/1 HTTP/1.1
@@ -1000,7 +1000,7 @@ Host: localhost:8080</code></pre>
 </div>
 </div>
 <div class="sect2">
-<h3 id="resources-create-evenets_http_response"><a class="link" href="#resources-create-evenets_http_response">HTTP response</a></h3>
+<h3 id="delete-task_http_response"><a class="link" href="#delete-task_http_response">HTTP response</a></h3>
 <div class="listingblock">
 <div class="content">
 <pre class="highlightjs highlight nowrap"><code data-lang="http" class="language-http hljs">HTTP/1.1 204 No Content</code></pre>
@@ -1032,7 +1032,7 @@ Host: localhost:8080</code></pre>
 <div id="footer">
 <div id="footer-text">
 Version 0.0.1-SNAPSHOT<br>
-Last updated 2022-10-06 10:54:34 +0900
+Last updated 2022-10-06 14:25:39 +0900
 </div>
 </div>
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.15.6/styles/github.min.css">
